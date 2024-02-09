@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@600&family=Lato&family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f242d;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+} 
+
+
+.logo{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 27px;
+    cursor: default;
+    
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 16px;
+    font-weight: 600;
+    transition: 0.3s all;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+/* ===============>> Hero Section <<================ */
+
+.hero-container{
+    display: flex;
+    padding: 25px 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-side h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.info-side h1{
+    font-size: 75px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    animation: slideRight 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+
+}
+
+.info-side h3 span {
+    color: #0ef;
+}
+
+
+.part-1{
+    animation: part1 1s ease forwards;
+    opacity: 0;
+
+}
+.part-2{
+    animation: part2 1s ease forwards;
+    opacity: 0;
+
+}
+
+
+p{
+    line-height: 27px;
+    margin: 20px 0px 40px 0px;
+    animation: slideLeftP 1s ease forwards ;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+
+.hero-img img {
+    width: 450px;
+    animation: zoomIn 1s ease forwards ;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+/* Default size */
+
+/*Facebook*/
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    font-size:large;
+  }
+
+  /* Linkedin */
+  .fa-linkedin {
+    background:rgb(115, 0, 255);
+    color:white
+  
+  }
+
+  /* Instagram */
+  .fa-instagram {
+    background:rgb(255, 0, 98);
+    color:white
+  }
+
+
+
+button{
+    background-color: #0ef;
+    margin-top: 50px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 3s;
+    box-shadow: 0 0 15px #0ef;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+button:hover{
+    box-shadow: none;
+}
+
+/* ================== Animation ============== */
+@keyframes identifier {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navMenu {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part1 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part2 {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeftP {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes socialIcons {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: sclase(0);
+        opacity: 0;
+    }
+    100% {
+        transform: sclase(1);
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+       flex-direction: column;
+    }
+    .navbar a {
+       padding: 10px 0;
+       text-align: center;
+    }
+ }
+
+ 
+ @media only screen and (max-width: 768px) {
+    .hero-container {
+       flex-direction: column;
+       align-items: center;
+    }
+    .info-side {
+       width: 100%;
+       text-align: center;
+    }
+    .hero-img img {
+       width: 100%;
+    }
+ }
+
+ 
+ .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 30px;
+ }
+
+ @media only screen and (max-width: 768px) {
+    button {
+       padding: 15px 40px;
+    }
+ }
+
+ @media only screen and (max-width: 768px) {
+    h1 {
+       font-size: 40px;
+    }
+    p {
+       font-size: 16px;
+       line-height: 24px;
+    }
+ }
+ 
+
+ @media only screen and (max-width: 768px) {
+    .navbar {
+       flex-direction: column;
+    }
+    .navbar a {
+       padding: 10px 0;
+       text-align: center;
+    }
+ }
+
+ 
+ @media only screen and (max-width: 768px) {
+    .hero-container {
+       flex-direction: column;
+       align-items: center;
+    }
+    .info-side {
+       width: 100%;
+       text-align: center;
+    }
+    .hero-img img {
+       width: 100%;
+    }
+ }
+
+ 
+ .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 30px;
+ }
+
+ 
+ @media only screen and (max-width: 768px) {
+    button {
+       padding: 15px 40px;
+    }
+ }
+
+ @media only screen and (max-width: 768px) {
+    h1 {
+       font-size: 40px;
+    }
+    p {
+       font-size: 16px;
+       line-height: 24px;
+    }
+ }
+
+ /* Add this style to your existing CSS */
+
+.hero-container {
+    display: flex;
+    padding: 25px 10%;
+    justify-content: flex-end; /* Align to the right */
+    align-items: flex-start; /* Align to the top */
+    height: 100vh; /* Make sure the container takes full viewport height */
+}
+
+/* Add this style for the image */
+.hero-container .info-side img {
+    height: auto; /* Adjust height based on your design */
+    width: 200px; /* Adjust width based on your design */
+    margin-top: 20px; /* Add margin for spacing from the top */
+}
+
+
+.info-side p {
+    line-height: 1.6; /* Adjust line height for better readability */
+    margin-bottom: 20px; /* Add margin between paragraphs */
+}
+
+ 
+
+
+
+
+
+
+
+
